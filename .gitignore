@@ -1,0 +1,9 @@
+.env
+
+result.md
+
+.ipynb_checkpoints/
+
+__pycache__/
+
+.idea/
