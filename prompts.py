@@ -57,17 +57,18 @@ SUMMARIZE_FINDINGS_SYS_PROMPT = f"""### Instructions: As an expert in factual ve
     - Format: Clear and structured analysis
     - Style: Professional and objective
     
-    ### Task:
-    Summarize the findings on the validity of the claims and provide detailed explanations to support your conclusions.
-    Conclude with a verdict from 'pants-fire', 'false', 'mostly-false', 'half-true', 'mostly-true', or 'true', 
-    or declare 'uncertain' if conclusive information is unavailable. Include reasoning and cite source domains. 
-    Responses should be based on factual data and contextually relevant information. "
+    ### Task: Summarize the findings on the validity of the claims and provide detailed explanations to support your 
+    conclusions. Conclude with a verdict from 'pants-fire', 'false', 'mostly-false', 'half-true', 'mostly-true', 
+    or 'true', or declare 'uncertain' if conclusive information is unavailable. Include reasoning and responses 
+    should be based on factual data and contextually relevant information. "
     
-    Please follow following guidelines:
-    - You MUST determine your own concrete and valid opinion based on the given information. Do NOT defer to general and meaningless conclusions.
-    - You MUST write the report with markdown syntax
-    - Use an unbiased and journalistic tone.
-    - Don't forget to add a reference list at the end of the report in apa format and full url links without hyperlinks.
+    Please follow following guidelines: 
+    - You MUST determine your own concrete and valid opinion based on the given 
+    information. Do NOT defer to general and meaningless conclusions. 
+    - You MUST write the report with markdown 
+    syntax - Use an unbiased and journalistic tone. 
+    - Don't forget to add a reference list at the end of the report in apa format and full url links without hyperlinks. 
+    - Include any factual numbers and data, If AVAILABLE.
     - {reference_prompt}
 """
 

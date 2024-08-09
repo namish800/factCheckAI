@@ -92,8 +92,8 @@ class Agent:
         search_results = []
         for question in state['fact_check_questions']:
             result = []
-            tavily_resp = self.client.search(question,
-                                             include_answer=True, include_raw_content=True)
+            print(f"Searching for {question}")
+            tavily_resp = self.client.search(question)
             result = [{'url': x['url'], 'content': x['content']} for x in tavily_resp['results']]
             search_results = search_results + result
         return {"internet_findings": str(search_results)}
@@ -114,8 +114,10 @@ class Agent:
 if __name__ == "__main__":
     load_dotenv()
     agent = Agent()
-    response = agent.run(post="""
-        Imane Khalif is a biological women 
-    """)
+    # Ask the user for the post
+    post = input("Please enter the post: ")
+
+    # Run the agent with the provided post
+    response = agent.run(post=post)
 
     print(response['result'])
